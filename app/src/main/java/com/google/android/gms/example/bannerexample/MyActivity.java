@@ -34,6 +34,7 @@ public class MyActivity extends ActionBarActivity
     private AdView myAdView;
     private Button pineApples;
     private ImageView pinePic;
+    private int Achievment;
 
 
     @Override
@@ -47,6 +48,7 @@ public class MyActivity extends ActionBarActivity
         pineApples = (Button) findViewById(R.id.pineApples);
         myAdView = (AdView) findViewById(R.id.ad_view);
         pinePic = (ImageView) findViewById(R.id.pinePic);
+
 
         // Create an ad request. Check your logcat output for the hashed device ID to
         // get test ads on a physical device. e.g.
@@ -116,7 +118,7 @@ public class MyActivity extends ActionBarActivity
         super.onDestroy();
     }
 
-    //what the button will be doing below
+    //if the pineapple is there, it disappears when button clicked, if gone the pineapple appears when button is clicked
     private void setUpListeners()
     {
         pineApples.setOnClickListener(new View.OnClickListener()
@@ -135,6 +137,12 @@ public class MyActivity extends ActionBarActivity
                     pineApples.setText("Click for pineapples");
                 }
 
+                Achievment = Achievment + 1;
+
+                if (Achievment == 100)
+                {
+                    pineApples.setText("You Destroyed 50 pineapples!");
+                }
             }
         });
     }
