@@ -55,4 +55,18 @@ public class SaveState extends Application
     }
 
     private boolean goal4;
+
+    public int PineCoins;
+
+    public int getPineCoins()
+    {
+        return PineCoins;
+    }
+
+    public void setPineCoins(int pineCoins)
+    {
+        PineCoins = pineCoins;
+    }
+
+
 }

@@ -39,7 +39,6 @@ public class MyActivity extends Activity
     private AdView myAdView;
     private Button pineApples;
     private ImageView pinePic;
-    private int Achievment1;
     private Button AchieveButton;
     private SaveState mySave;
     private TextView count;
@@ -159,37 +158,38 @@ public class MyActivity extends Activity
                 {
                     pinePic.setVisibility(View.INVISIBLE);
                     pineApples.setText("Click for pineapples");
-                    count.setText("Pineapples:" + Achievment1);
+                    count.setText("Pineapples:" + mySave.PineCoins);
 
+                    mySave.PineCoins = 1 + mySave.PineCoins;
                 }
 
-                Achievment1 = Achievment1 + 1;
 
-                if (Achievment1 == 20)
+
+                if (mySave.PineCoins == 11)
                 {
                    mySave.setGoal1(true);
                     pineApples.setText("Achievment earned");
-                    Achievment1 = 20;
+                    mySave.PineCoins = 11;
 
                 }
-                if (Achievment1 == 100)
+                if (mySave.PineCoins == 51)
                 {
                     mySave.setGoal2(true);
                     pineApples.setText("Achievment earned");
-                    Achievment1 = 100;
+                    mySave.PineCoins = 51;
                 }
-                if (Achievment1 == 500)
+                if (mySave.PineCoins == 251)
                 {
-                    mySave.setGoal2(true);
-                    pineApples.setText("Achievment earned");
-                    Achievment1 = 250;
+                    mySave.setGoal3(true);
+                    pineApples.setText(" Super Achievment earned");
+                    mySave.PineCoins = 251;
 
                 }
-                if (Achievment1 == 2000)
+                if (mySave.PineCoins == 1001)
                 {
-                    mySave.setGoal2(true);
-                    pineApples.setText("Achievment earned");
-                    Achievment1 = 2000;
+                    mySave.setGoal4(true);
+                    pineApples.setText(" Super Achievment earned");
+                    mySave.PineCoins = 1001;
                 }
             }
         });

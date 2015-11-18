@@ -45,19 +45,19 @@ public class Achievments extends AppCompatActivity
     {
         if (mySave.isGoal1() == true)
         {
-            trophy1.setTextColor(Color.rgb(0, 255, 0));
+            trophy1.setTextColor(Color.rgb(0, 0, 0));
         }
         if (mySave.isGoal2())
         {
-            trophy2.setTextColor(Color.rgb(0, 255, 0));
+            trophy2.setTextColor(Color.rgb(0, 0, 0));
         }
         if (mySave.isGoal3())
         {
-            trophy3.setTextColor(Color.rgb(0, 255, 0));
+            trophy3.setTextColor(Color.rgb(0, 0, 0));
         }
         if (mySave.isGoal4())
         {
-            trophy4.setTextColor(Color.rgb(0, 255, 0));
+            trophy4.setTextColor(Color.rgb(0, 0, 0));
         }
     }
     @Override
