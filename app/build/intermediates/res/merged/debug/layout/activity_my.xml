@@ -39,5 +39,14 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
         android:visibility="invisible" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Achievments"
+        android:id="@+id/AchieveButton"
+        android:layout_above="@+id/ad_view"
+        android:layout_toLeftOf="@+id/pinePic"
+        android:layout_toStartOf="@+id/pinePic" />
 </RelativeLayout>
 <!-- From: file:/Users/tjar2074/Documents/workspace/AdMobBanner/app/src/main/res/layout/activity_my.xml -->
