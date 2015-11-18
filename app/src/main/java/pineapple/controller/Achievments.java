@@ -13,11 +13,11 @@ import pineapple.model.SaveState;
 
 public class Achievments extends AppCompatActivity
 {
-
-    public boolean goal1;
-    public boolean goal2;
     private TextView trophy1;
     private TextView trophy2;
+    private TextView trophy3;
+    private TextView trophy4;
+
     private Button homeButton;
     private SaveState mySave;
 
@@ -29,6 +29,8 @@ public class Achievments extends AppCompatActivity
 
         trophy1 = (TextView) findViewById(pineapple.controller.R.id.trophy1);
         trophy2 = (TextView) findViewById(pineapple.controller.R.id.trophy2);
+        trophy3 = (TextView) findViewById(pineapple.controller.R.id.trophy3);
+        trophy4 = (TextView) findViewById(pineapple.controller.R.id.trophy4);
         homeButton = (Button) findViewById(pineapple.controller.R.id.homeButton);
         mySave = (SaveState) getApplication();
 
@@ -48,6 +50,14 @@ public class Achievments extends AppCompatActivity
         if (mySave.isGoal2())
         {
             trophy2.setTextColor(Color.rgb(0, 255, 0));
+        }
+        if (mySave.isGoal3())
+        {
+            trophy3.setTextColor(Color.rgb(0, 255, 0));
+        }
+        if (mySave.isGoal4())
+        {
+            trophy4.setTextColor(Color.rgb(0, 255, 0));
         }
     }
     @Override

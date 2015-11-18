@@ -26,7 +26,7 @@ import com.google.android.gms.ads.AdView;
 import android.widget.ImageView;
 import android.content.Intent;
 import pineapple.model.SaveState;
-
+import android.widget.TextView;
 
 
 
@@ -42,6 +42,7 @@ public class MyActivity extends Activity
     private int Achievment1;
     private Button AchieveButton;
     private SaveState mySave;
+    private TextView count;
 
 
 
@@ -58,7 +59,7 @@ public class MyActivity extends Activity
         pinePic = (ImageView) findViewById(pineapple.controller.R.id.pinePic);
         AchieveButton = (Button) findViewById(pineapple.controller.R.id.AchieveButton);
         mySave = (SaveState) getApplication();
-
+        count = (TextView) findViewById(pineapple.controller.R.id.count);
 
 
 
@@ -158,6 +159,8 @@ public class MyActivity extends Activity
                 {
                     pinePic.setVisibility(View.INVISIBLE);
                     pineApples.setText("Click for pineapples");
+                    count.setText("Pineapples:" + Achievment1);
+
                 }
 
                 Achievment1 = Achievment1 + 1;
@@ -166,14 +169,27 @@ public class MyActivity extends Activity
                 {
                    mySave.setGoal1(true);
                     pineApples.setText("Achievment earned");
-                    Achievment1 = 21;
+                    Achievment1 = 20;
 
                 }
                 if (Achievment1 == 100)
                 {
                     mySave.setGoal2(true);
                     pineApples.setText("Achievment earned");
+                    Achievment1 = 100;
+                }
+                if (Achievment1 == 500)
+                {
+                    mySave.setGoal2(true);
+                    pineApples.setText("Achievment earned");
+                    Achievment1 = 250;
 
+                }
+                if (Achievment1 == 2000)
+                {
+                    mySave.setGoal2(true);
+                    pineApples.setText("Achievment earned");
+                    Achievment1 = 2000;
                 }
             }
         });

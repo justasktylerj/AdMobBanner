@@ -48,4 +48,14 @@
         android:layout_above="@+id/ad_view"
         android:layout_toLeftOf="@+id/pinePic"
         android:layout_toStartOf="@+id/pinePic" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="PineApples: 0"
+        android:id="@+id/count"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/AchieveButton"
+        android:layout_alignStart="@+id/AchieveButton" />
 </RelativeLayout>

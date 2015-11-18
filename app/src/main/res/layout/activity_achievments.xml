@@ -19,9 +19,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="destroy 50 pineapples"
+        android:text="FARMER: create and destroy 50 pineapples"
         android:id="@+id/trophy2"
-        android:layout_below="@+id/homeButton"
+        android:layout_below="@+id/trophy1"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true" />
 
@@ -29,11 +29,30 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="destroy 10 pineapples"
+        android:text="SHOPPER: create and destroy 10 pineapples"
         android:id="@+id/trophy1"
         android:layout_below="@+id/homeButton"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="PSYCH: Create and destroy 1000 pineapples"
+        android:id="@+id/trophy4"
+        android:layout_below="@+id/trophy3"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_marginTop="27dp" />
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="OBSESSIVE: create and destroy 250 pineapples"
+        android:id="@+id/trophy3"
+        android:layout_below="@+id/trophy2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
 </RelativeLayout>
