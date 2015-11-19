@@ -59,4 +59,4 @@
         android:layout_alignLeft="@+id/AchieveButton"
         android:layout_alignStart="@+id/AchieveButton" />
 </RelativeLayout>
-<!-- From: file:/Users/kids/AdMobBanner/app/src/main/res/layout/activity_my.xml -->
+<!-- From: file:/Users/tjar2074/Documents/workspace/AdMobBanner/app/src/main/res/layout/activity_my.xml -->
