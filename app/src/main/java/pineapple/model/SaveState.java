@@ -7,6 +7,7 @@ import android.app.Application;
  */
 public class SaveState extends Application
 {
+//saves info across screens
 
     private boolean goal1;
 

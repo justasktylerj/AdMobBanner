@@ -150,7 +150,7 @@ public class MyActivity extends Activity
                 if (pinePic.getVisibility() == View.INVISIBLE)
                 {
                     pinePic.setVisibility(View.VISIBLE);
-                    pineApples.setText("Destroy pineapple");
+                    pineApples.setText("Eat pineapple");
 
                 }
 
@@ -163,7 +163,7 @@ public class MyActivity extends Activity
                     mySave.PineCoins = 1 + mySave.PineCoins;
                 }
 
-
+//achievments statments
 
                 if (mySave.PineCoins == 11)
                 {

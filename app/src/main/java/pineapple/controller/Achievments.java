@@ -40,7 +40,7 @@ public class Achievments extends AppCompatActivity
     }
 
 
-
+//when achivement earned turns it to black
     public void trophies()
     {
         if (mySave.isGoal1() == true)
@@ -84,7 +84,7 @@ public class Achievments extends AppCompatActivity
 
         return super.onOptionsItemSelected(item);
     }
-
+//change screen button
     private void setUpListeners()
     {
         homeButton.setOnClickListener(new View.OnClickListener()
