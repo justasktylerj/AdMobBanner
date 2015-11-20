@@ -167,7 +167,7 @@ public class MyActivity extends Activity
                 else
                 {
                     pinePic.setVisibility(View.INVISIBLE);
-                    pineApples.setText("Click for pineapples");
+                    pineApples.setText("Grow pineapple");
                     count.setText("PineApples:" + mySave.PineCoins);
 
                     mySave.PineCoins = 1 + mySave.PineCoins;
