@@ -12,11 +12,13 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Click for pineapples"
+        android:text="Grow pineapples"
         android:id="@+id/pineApples"
+        android:background="@drawable/woodb2"
         android:layout_above="@+id/ad_view"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="121dp" />
+        android:layout_toLeftOf="@+id/shop"
+        android:layout_toEndOf="@+id/AchieveButton"
+        android:layout_toRightOf="@+id/AchieveButton" />
 
     <com.google.android.gms.ads.AdView
         android:layout_width="wrap_content"
@@ -37,21 +39,21 @@
         android:adjustViewBounds="true"
         android:src="@drawable/pine"
         android:visibility="invisible"
-        android:layout_above="@+id/pineApples"
-        android:layout_alignLeft="@+id/pineApples"
-        android:layout_alignStart="@+id/pineApples"
         android:layout_below="@+id/count"
-        android:layout_alignRight="@+id/pineApples"
-        android:layout_alignEnd="@+id/pineApples" />
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="29dp" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Achievments"
         android:id="@+id/AchieveButton"
+        android:background="@drawable/woodb2"
         android:layout_above="@+id/ad_view"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:layout_alignRight="@+id/count"
+        android:layout_alignEnd="@+id/count" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -60,15 +62,17 @@
         android:text="PineApples: 0"
         android:id="@+id/count"
         android:layout_alignParentTop="true"
-        android:layout_alignLeft="@+id/AchieveButton"
-        android:layout_alignStart="@+id/AchieveButton" />
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
 
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Store"
         android:id="@+id/shop"
+        android:background="@drawable/woodb2"
         android:layout_above="@+id/ad_view"
         android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
+
 </RelativeLayout>

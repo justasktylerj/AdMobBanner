@@ -14,5 +14,6 @@
         android:id="@+id/mainButton"
         android:layout_alignParentBottom="true"
         android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignParentStart="true"
+        android:background="@drawable/woodb2" />
 </RelativeLayout>
