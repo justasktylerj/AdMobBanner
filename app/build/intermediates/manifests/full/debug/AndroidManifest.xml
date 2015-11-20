@@ -43,6 +43,10 @@
             android:label="@string/title_activity_achievments" >
         </activity>
         <activity
+            android:name="pineapple.controller.ShopActivity"
+            android:label="@string/title_activity_shop" >
+        </activity>
+        <activity
             android:name="com.google.android.gms.ads.purchase.InAppPurchaseActivity"
             android:theme="@style/Theme.IAPTheme" />
     </application>

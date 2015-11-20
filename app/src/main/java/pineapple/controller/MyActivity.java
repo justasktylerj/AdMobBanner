@@ -26,6 +26,7 @@ import com.google.android.gms.ads.AdView;
 import android.widget.ImageView;
 import android.content.Intent;
 import pineapple.model.SaveState;
+import android.graphics.Color;
 import android.widget.TextView;
 
 
@@ -42,6 +43,7 @@ public class MyActivity extends Activity
     private Button AchieveButton;
     private SaveState mySave;
     private TextView count;
+    private Button shop;
 
 
 
@@ -59,7 +61,7 @@ public class MyActivity extends Activity
         AchieveButton = (Button) findViewById(pineapple.controller.R.id.AchieveButton);
         mySave = (SaveState) getApplication();
         count = (TextView) findViewById(pineapple.controller.R.id.count);
-
+        shop = (Button) findViewById(pineapple.controller.R.id.shop);
 
 
         // Create an ad request. Check your logcat output for the hashed device ID to
@@ -71,6 +73,8 @@ public class MyActivity extends Activity
 
         // Start loading the ad in the background.
         myAdView.loadAd(adRequest);
+
+        count.setTextColor(Color.rgb(255, 255, 255));
 
         setUpListeners();
     }
@@ -142,6 +146,12 @@ public class MyActivity extends Activity
             }
         });
 
+        shop.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View buttonView) {
+                Intent myIntent = new Intent(buttonView.getContext(), ShopActivity.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
 
         pineApples.setOnClickListener(new View.OnClickListener()
         {
@@ -158,38 +168,39 @@ public class MyActivity extends Activity
                 {
                     pinePic.setVisibility(View.INVISIBLE);
                     pineApples.setText("Click for pineapples");
-                    count.setText("Pineapples:" + mySave.PineCoins);
+                    count.setText("PineApples:" + mySave.PineCoins);
 
                     mySave.PineCoins = 1 + mySave.PineCoins;
+                    mySave.PineTotal = 1 + mySave.PineTotal;
                 }
 
 //achievments statments
 
-                if (mySave.PineCoins == 11)
+                if (mySave.PineTotal == 11)
                 {
                    mySave.setGoal1(true);
                     pineApples.setText("Achievment earned");
                     mySave.PineCoins = 11;
 
                 }
-                if (mySave.PineCoins == 51)
+                if (mySave.PineTotal == 51)
                 {
                     mySave.setGoal2(true);
                     pineApples.setText("Achievment earned");
-                    mySave.PineCoins = 51;
+                    mySave.PineTotal = 51;
                 }
-                if (mySave.PineCoins == 251)
+                if (mySave.PineTotal == 251)
                 {
                     mySave.setGoal3(true);
                     pineApples.setText(" Super Achievment earned");
-                    mySave.PineCoins = 251;
+                    mySave.PineTotal = 251;
 
                 }
-                if (mySave.PineCoins == 1001)
+                if (mySave.PineTotal == 1001)
                 {
                     mySave.setGoal4(true);
                     pineApples.setText(" Super Achievment earned");
-                    mySave.PineCoins = 1001;
+                    mySave.PineTotal = 1001;
                 }
             }
         });

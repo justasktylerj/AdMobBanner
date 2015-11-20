@@ -69,5 +69,17 @@ public class SaveState extends Application
         PineCoins = pineCoins;
     }
 
+    public int PineTotal;
+
+
+    public int getPineTotal()
+    {
+        return PineTotal;
+    }
+
+    public void setPineTotal(int pineTotal)
+    {
+        PineTotal = pineTotal;
+    }
 
 }
