@@ -7,7 +7,7 @@
     android:layout_marginTop="@dimen/activity_vertical_margin"
     tools:context=".MyActivity"
     tools:ignore="MergeRootFrame"
-    android:background="@drawable/wood">
+    android:background="@drawable/backwood">
 
     <Button
         android:layout_width="wrap_content"

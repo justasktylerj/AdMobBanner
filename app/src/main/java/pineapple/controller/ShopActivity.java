@@ -1,20 +1,31 @@
 package pineapple.controller;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.content.Intent;
+import pineapple.model.SaveState;
+import android.widget.*;
+
 
 import pineapple.controller.R;
 
 public class ShopActivity extends AppCompatActivity
 {
+    private Button mainButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shop);
+
+        mainButton = (Button) findViewById(pineapple.controller.R.id.mainButton);
+
+        setUpListeners();
     }
 
     @Override
@@ -40,5 +51,17 @@ public class ShopActivity extends AppCompatActivity
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    private void setUpListeners()
+    {
+        mainButton.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View buttonView)
+            {
+                Intent myIntent = new Intent(buttonView.getContext(), MyActivity.class);
+                startActivityForResult(myIntent, 0);
+            }
+        });
     }
 }
