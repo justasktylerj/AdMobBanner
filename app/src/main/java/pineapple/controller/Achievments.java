@@ -17,6 +17,7 @@ public class Achievments extends AppCompatActivity
     private TextView trophy2;
     private TextView trophy3;
     private TextView trophy4;
+    private TextView trophy5;
 
     private Button homeButton;
     private SaveState mySave;
@@ -31,6 +32,7 @@ public class Achievments extends AppCompatActivity
         trophy2 = (TextView) findViewById(pineapple.controller.R.id.trophy2);
         trophy3 = (TextView) findViewById(pineapple.controller.R.id.trophy3);
         trophy4 = (TextView) findViewById(pineapple.controller.R.id.trophy4);
+        trophy5 = (TextView) findViewById(pineapple.controller.R.id.trophy5);
         homeButton = (Button) findViewById(pineapple.controller.R.id.homeButton);
         mySave = (SaveState) getApplication();
 
@@ -58,6 +60,10 @@ public class Achievments extends AppCompatActivity
         if (mySave.isGoal4())
         {
             trophy4.setTextColor(Color.rgb(0, 0, 0));
+        }
+        if (mySave.isGoal5())
+        {
+            trophy5.setTextColor(Color.rgb(0, 0, 0));
         }
     }
     @Override

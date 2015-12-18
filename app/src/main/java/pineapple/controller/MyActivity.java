@@ -44,6 +44,8 @@ public class MyActivity extends Activity
     private SaveState mySave;
     private TextView count;
     private Button shop;
+    private TextView displayCoins;
+
 
 
 
@@ -62,6 +64,7 @@ public class MyActivity extends Activity
         mySave = (SaveState) getApplication();
         count = (TextView) findViewById(pineapple.controller.R.id.count);
         shop = (Button) findViewById(pineapple.controller.R.id.shop);
+        displayCoins = (TextView) findViewById(pineapple.controller.R.id.displayCoins);
 
 
         // Create an ad request. Check your logcat output for the hashed device ID to
@@ -74,6 +77,7 @@ public class MyActivity extends Activity
         // Start loading the ad in the background.
         myAdView.loadAd(adRequest);
 
+        displayCoins.setTextColor(Color.rgb(255, 255, 255));
         count.setTextColor(Color.rgb(255, 255, 255));
 
         setUpListeners();
@@ -143,6 +147,7 @@ public class MyActivity extends Activity
             {
                 Intent myIntent = new Intent(buttonView.getContext(), Achievments.class);
                 startActivityForResult(myIntent, 0);
+
             }
         });
 
@@ -168,19 +173,36 @@ public class MyActivity extends Activity
                 {
                     pinePic.setVisibility(View.INVISIBLE);
                     pineApples.setText("Grow pineapple");
-                    count.setText("PineApples:" + mySave.PineCoins);
+                    count.setText("PineApples: " + mySave.PineTotal);
+                    displayCoins.setText("PineCoins: " + mySave.PineCoins);
 
                     mySave.PineCoins = 1 + mySave.PineCoins;
                     mySave.PineTotal = 1 + mySave.PineTotal;
+                }
+
+                if (mySave.goal5 == true)
+                {
+                    int redColor;
+                    int greenColor;
+                    int blueColor;
+
+                    redColor = (int) (Math.random() * 256);
+                    greenColor = (int) (Math.random() * 256);
+                    blueColor = (int) (Math.random() * 256);
+
+                    displayCoins.setTextColor(Color.rgb(redColor, greenColor, blueColor));
+                    count.setTextColor(Color.rgb(redColor, greenColor, blueColor));
                 }
 
 //achievments statments
 
                 if (mySave.PineTotal == 11)
                 {
-                   mySave.setGoal1(true);
+                    mySave.setGoal1(true);
                     pineApples.setText("Achievment earned");
-                    mySave.PineCoins = 11;
+                    mySave.PineTotal = 11;
+                    mySave.PineCoins = 5 + mySave.PineCoins;
+
 
                 }
                 if (mySave.PineTotal == 51)
@@ -188,12 +210,14 @@ public class MyActivity extends Activity
                     mySave.setGoal2(true);
                     pineApples.setText("Achievment earned");
                     mySave.PineTotal = 51;
+                    mySave.PineCoins = 5 + mySave.PineCoins;
                 }
                 if (mySave.PineTotal == 251)
                 {
                     mySave.setGoal3(true);
                     pineApples.setText(" Super Achievment earned");
                     mySave.PineTotal = 251;
+                    mySave.PineCoins = 25 + mySave.PineCoins;
 
                 }
                 if (mySave.PineTotal == 1001)
@@ -201,6 +225,7 @@ public class MyActivity extends Activity
                     mySave.setGoal4(true);
                     pineApples.setText(" Super Achievment earned");
                     mySave.PineTotal = 1001;
+                    mySave.PineCoins = 50 + mySave.PineCoins;
                 }
             }
         });

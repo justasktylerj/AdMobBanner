@@ -11,11 +11,15 @@ import pineapple.model.SaveState;
 import android.widget.*;
 
 
+
 import pineapple.controller.R;
 
 public class ShopActivity extends AppCompatActivity
 {
     private Button mainButton;
+    private Button colorChangeTextBuy;
+    private SaveState mySave;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState)
@@ -24,8 +28,14 @@ public class ShopActivity extends AppCompatActivity
         setContentView(R.layout.activity_shop);
 
         mainButton = (Button) findViewById(pineapple.controller.R.id.mainButton);
-
+        colorChangeTextBuy = (Button) findViewById(pineapple.controller.R.id.colorChangeTextBuy);
+        mySave = (SaveState) getApplication();
+        if (mySave.goal5 == true)
+        {
+            colorChangeTextBuy.setVisibility(View.GONE);
+        }
         setUpListeners();
+
     }
 
     @Override
@@ -61,6 +71,26 @@ public class ShopActivity extends AppCompatActivity
             {
                 Intent myIntent = new Intent(buttonView.getContext(), MyActivity.class);
                 startActivityForResult(myIntent, 0);
+            }
+        });
+
+        colorChangeTextBuy.setOnClickListener(new View.OnClickListener()
+        {
+            public void onClick(View buttonView)
+            {
+                if (mySave.PineCoins >= 50)
+                {
+
+                    mySave.PineCoins = -50 + mySave.PineCoins;
+                    colorChangeTextBuy.setVisibility(View.GONE);
+                    mySave.setGoal5(true);
+
+
+                }
+                else
+                {
+
+                }
             }
         });
     }

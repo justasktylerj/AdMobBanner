@@ -57,6 +57,18 @@ public class SaveState extends Application
 
     private boolean goal4;
 
+    public boolean isGoal5()
+    {
+        return goal5;
+    }
+
+    public void setGoal5(boolean goal5)
+    {
+        this.goal5 = goal5;
+    }
+
+    public boolean goal5;
+
     public int PineCoins;
 
     public int getPineCoins()
